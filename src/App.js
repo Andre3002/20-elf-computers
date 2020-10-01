@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import slugify from 'slugify';
 import './App.css';
+import ComponentList from './ComponentList/ComponentList'
 
 // This object will allow us to
 // easily convert numbers into US dollar values
@@ -97,10 +98,13 @@ export default class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <form className="main__form">
+          {/* ComponentList Section */}
+          <ComponentList features = {features} />
+          {/* <form className="main__form">
             <h2>Customize your laptop</h2>
             {features}
-          </form>
+          </form> */}
+
           <section className="main__summary">
             <h2>Your cart</h2>
             {summary}
