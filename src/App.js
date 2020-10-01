@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import slugify from 'slugify';
 import './App.css';
 import ComponentList from './ComponentList/ComponentList'
 import ShoppingCart from './ShoppingCart/ShoppingCart'
-
-// This object will allow us to
-// easily convert numbers into US dollar values
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD'
-});
 
 export default class App extends Component {
   state = {
@@ -42,30 +34,21 @@ export default class App extends Component {
   };
 
   render() {
-
-    
-
-    return (
+     return (
       <div className="App">
         <header>
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          {/* ComponentList Section */}
           <ComponentList 
             features={this.props.features} 
             selected={this.state.selected}
             updateFeature={this.updateFeature}
           />
           
-          {/* ShoppingCart Section */}
-
           <ShoppingCart 
             selected={this.state.selected}
-            
-
-          />
-          
+          />         
         </main>
       </div>
     );
