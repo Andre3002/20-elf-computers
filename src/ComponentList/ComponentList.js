@@ -14,3 +14,7 @@ export default class ComponentList extends Component {
         )
     }
 }
+
+ComponentList.defaultProps={
+    features:[]
+}
