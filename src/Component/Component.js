@@ -1,6 +1,7 @@
 import React from 'react'
 import slugify from 'slugify';
 
+
 // This object will allow us to
 // easily convert numbers into US dollar values
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
