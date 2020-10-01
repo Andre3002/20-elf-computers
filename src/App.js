@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
 import slugify from 'slugify';
-
 import './App.css';
 
 // This object will allow us to
@@ -13,7 +9,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   currency: 'USD'
 });
 
-class App extends Component {
+export default class App extends Component {
   state = {
     selected: {
       Processor: {
@@ -121,4 +117,3 @@ class App extends Component {
   }
 }
 
-export default App;
