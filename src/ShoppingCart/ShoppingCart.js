@@ -1,10 +1,6 @@
 import React from 'react'
-import SelectedItem from '../SelectedItem/SelectedItem';
-
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD'
-});
+import SelectedItem from '../SelectedItem/SelectedItem'
+import Total from '../Total/Total'
 
 export default function ShoppingCart(props) {
 
@@ -20,11 +16,6 @@ export default function ShoppingCart(props) {
         )
     });
 
-    const total = Object.keys(props.selected).reduce(
-        (acc, curr) => acc + props.selected[curr].cost,
-        0
-    );
-
     return (
         <section className="main__summary">
             <h2>Your cart</h2>
@@ -32,7 +23,9 @@ export default function ShoppingCart(props) {
             <div className="summary__total">
                 <div className="summary__total__label">Total</div>
                 <div className="summary__total__value">
-                    {USCurrencyFormat.format(total)}
+                    <Total
+                        selected={props.selected}
+                    />
                 </div>
             </div>
         </section>
