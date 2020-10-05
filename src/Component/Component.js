@@ -14,7 +14,7 @@ export default function Component(props) {
                 features={props.features}
             />
         )
-    });
+    }); 
 
     return (
         <fieldset className="feature" key={featureHash}>
